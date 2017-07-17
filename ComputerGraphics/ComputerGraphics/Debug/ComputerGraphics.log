@@ -1,3 +1,9 @@
 ﻿  main.c
-  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\Visual Studio 2017\Projects\ComputerGraphics\Debug\ComputerGraphicsFinal.exe
-  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\Visual Studio 2017\Projects\ComputerGraphics\Debug\ComputerGraphicsFinal.pdb (Partial PDB)
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(27): warning C4305: '関数': 'double' から 'GLclampf' へ切り詰めます。
+  drawer.c
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\drawer.c(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
+  コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.exe
+  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.pdb (Partial PDB)
