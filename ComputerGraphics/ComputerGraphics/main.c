@@ -13,23 +13,24 @@ void myInit(char *progname) {
 	glMatrixMode(GL_PROJECTION);
 	gluPerspective(90.0, (double)width / (double)height, 0.1, 20.0);
 	glMatrixMode(GL_MODELVIEW);
+	glShadeModel(GL_SMOOTH);
 	glLoadIdentity();
 	// init camera
 	gluLookAt(
-		-1.0, 1.0, -1.0,
+		-2.0, 2.0, -2.0,
 		0.0, 0.0, 0.0,
 		0.5, 0.5, 0.5);
 }
 
 void myDisplay(void) {
 	glClear(GL_COLOR_BUFFER_BIT);
-	
-	glPushMatrix();	//1
-		glPushMatrix();	//2
-			glRotated(1.0, 1.0, 1.0, 1.0);
-			glColor3d(1.0, 0.0, 0.0);
-			glutWireTeapot(1.0);
-		glPopMatrix();	//2
+	glClearColor(0.5, 0.7, 1.0, 1.0);
+	//glPushMatrix();	//1
+	//	glPushMatrix();	//2
+	//		glRotated(1.0, 1.0, 1.0, 1.0);
+	//		glColor3d(1.0, 0.0, 0.0);
+	//		glutWireTeapot(1.0);
+	//	glPopMatrix();	//2
 		drawGround();
 	glPopMatrix();	//1
 	glutSwapBuffers();

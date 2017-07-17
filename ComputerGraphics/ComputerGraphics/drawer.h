@@ -1,7 +1,7 @@
 ﻿#ifndef _DRAWER_H_
 #define _DRAWER_H_
 
-//  関数avgのプロトタイプ宣言
 void drawGround();
+void drawBackGround();
 
 #endif // _DRAWER_H_
