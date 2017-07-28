@@ -1,74 +1,138 @@
-#include "drawer.h"
 #include <GL\glut.h>
-#include <stdio.h>
+#include "drawer.h"
 
-#define imageWidth 256
-#define imageHeight 256
+void drawHead(int head) {
+	/* head */
+	glPushMatrix();
+		glTranslated(0.0, 1.25, 0.0);
+		glRotated(90, 0.0, 1.0, 0.0);
+		glRotated((double)head, 0.0, 1.0, 0.0);
+		glPushMatrix();
+			glScaled(1.0, 1.0, 1.0);
+			glutWireSphere(0.5, 20.0, 10.0);
+		glPopMatrix();
 
-unsigned char texImage[imageHeight][imageWidth][3];
-
-void readPPMImage(char* filename) {
-	FILE *fp;
-	int  ch, i;
-
-	if ((fp = fopen(filename, "r")) == NULL) {
-		fprintf(stderr, "Cannot open ppm file %s\n", filename);
-		exit(1);
-	}
-	for (i = 0; i < 4; i++) { 						// skip four in header
-		while (1) {
-			if ((ch = fgetc(fp)) != '#') break;		// skip comment
-			fgets((char*)texImage, 1024, fp);   	// dummy read
-			while (isspace(ch)) ch = fgetc(fp);  	// skip space
-		}
-		while (!isspace(ch)) ch = fgetc(fp);		// read header
-													/* Newline or other single terminator after header may exist. */
-		if (i < 3) {
-			while (isspace(ch)) ch = fgetc(fp);		// skip terminator
-		}
-	}
-	fread(texImage, 1, imageWidth*imageHeight * 3, fp);	// read RGB data
-	fclose(fp);
+		glTranslated(0.0, 0.0, 0.5);
+		glPushMatrix();
+			glScaled(1.0, 1.0, 1.0);
+			glutWireCone(0.125, 0.25, 20.0, 10.0);
+		glPopMatrix();
+	glPopMatrix();
 }
 
-void setupTexture(char* filename) {
-	readPPMImage(filename);
-	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-	// テクスチャの設定
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, imageWidth, imageHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, texImage);
+void drawRightArm(int shoulder, int elbow) {
+	glPushMatrix();
+		/* right arm (1st link) */
+		glTranslated(0.0, 0.7, 0.0);
+		glRotated((double)shoulder, 0.0, 0.0, 1.0);
+		glTranslated(0.5, 0.0, 1.0);
+		glPushMatrix();
+			glScaled(1.0, 0.5, 0.5);
+			glutWireCube(1.0);
+		glPopMatrix();
+
+		/* right arm (2nd link) */
+		glTranslated(0.5, 0.0, 0.0);				//move to the end of 1st link
+		glRotated((double)elbow, 0.0, 0.0, 1.0);
+		glTranslated(0.5, 0.0, 0.0);
+		glPushMatrix();
+			glScaled(1.0, 0.5, 0.5);
+			glutWireCube(1.0);
+		glPopMatrix();
+
+		/* right arm (3rd link) */
+		glTranslated(0.5, 0.0, 0.0);				//move to the end of 1st link
+		glTranslated(0.2, 0.0, 0.0);
+		glPushMatrix();
+			glScaled(0.5, 0.5, 0.5);
+			glutWireSphere(0.5, 20.0, 10.0);
+		glPopMatrix();
+	glPopMatrix();
 }
 
-void drawGround() {
-	double	tc = 10.0;
+void drawLeftArm(int shoulder, int elbow) {
+	glPushMatrix();
+		/* left arm (1st link) */
+		glTranslated(0.0, 0.7, 0.0);
+		glRotated((double)shoulder, 0.0, 0.0, 1.0);
+		glTranslated(0.5, 0.0, -1.0);
+		glPushMatrix();
+			glScaled(1.0, 0.5, 0.5);
+			glutWireCube(1.0);
+		glPopMatrix();
 
-	setupTexture("ground.ppm");
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND);
-	glEnable(GLUT_DEPTH);
-	glEnable(GL_SHININESS);
-	glEnable(GL_TEXTURE_2D);
+		/* left arm (2nd link) */
+		glTranslated(0.5, 0.0, 0.0);				//move to the end of 1st link
+		glRotated((double)elbow, 0.0, 0.0, 1.0);
+		glTranslated(0.5, 0.0, 0.0);
+		glPushMatrix();
+			glScaled(1.0, 0.5, 0.5);
+			glutWireCube(1.0);
+		glPopMatrix();
 
-	glBegin(GL_QUADS);
-	// ループで貼り付け
-	for (int i = -35; i < 36; i += 2) {
-		glTexCoord2d(0.0, tc);		glVertex3i(-35, 0, i);
-		glTexCoord2d(0.0, 0.0);		glVertex3i(i, 0, 35);
-		glTexCoord2d(tc,  0.0);		glVertex3i(i, 0, -35);
-		glTexCoord2d(tc,  tc);		glVertex3i( 35, 0,   i);
-	}
-	glEnd();
-
-	glFlush();
-	glDisable(GL_TEXTURE_2D);
-	glDisable(GL_SHININESS);
-	glDisable(GL_DEPTH);
+		/* left arm (3rd link) */
+		glTranslated(0.5, 0.0, 0.0);				//move to the end of 1st link
+		glTranslated(0.2, 0.0, 0.0);
+		glPushMatrix();
+			glScaled(0.5, 0.5, 0.5);
+			glutWireSphere(0.5, 20.0, 10.0);
+		glPopMatrix();
+	glPopMatrix();
 }
 
-void drawBackGround() {
+void drawRightLeg(int groin, int knee) {
+	glPushMatrix();
+		/* right leg (1st link) */
+		glTranslated(0.0, -0.85, 0.0);
+		glRotated((double)groin, 0.0, 0.0, 1.0);
+		glTranslated(1.0, 0.0, 0.5);
+		glPushMatrix();
+			glScaled(2.0, 0.7, 0.7);
+			glutWireCube(1.0);
+		glPopMatrix();
 
+		/* right leg (2nd link) */
+		glTranslated(1.0, 0.0, 0.0);
+		glRotated((double)knee, 0.0, 0.0, 1.0);
+		glTranslated(1.0, 0.0, 0.0);
+		glPushMatrix();
+			glScaled(2.0, 0.7, 0.7);
+			glutWireCube(1.0);
+		glPopMatrix();
+
+		/* right leg (3rd link) */
+		glTranslated(1.25, 0.125, 0.0);
+		glPushMatrix();
+			glScaled(0.5, 1.0, 0.7);
+			glutWireCube(1.0);
+		glPopMatrix();
+	glPopMatrix();
 }
 
+void drawLeftLeg(int groin, int knee) {
+	glPushMatrix();
+		/* left leg (1st link) */
+		glTranslated(0.0, -0.85, 0.0);
+		glRotated((double)groin, 0.0, 0.0, 1.0);
+		glTranslated(1.0, 0.0, -0.5);
+		glPushMatrix();
+			glScaled(2.0, 0.7, 0.7);
+			glutWireCube(1.0);
+		glPopMatrix();
+		/* left leg (2nd link) */
+		glTranslated(1.0, 0.0, 0.0);
+		glRotated((double)knee, 0.0, 0.0, 1.0);
+		glTranslated(1.0, 0.0, 0.0);
+		glPushMatrix();
+			glScaled(2.0, 0.7, 0.7);
+			glutWireCube(1.0);
+		glPopMatrix();
+
+		/* left leg (3rd link) */
+		glTranslated(1.25, 0.125, 0.0);
+		glPushMatrix();
+			glScaled(0.5, 1.0, 0.7);
+			glutWireCube(1.0);
+		glPopMatrix();
+	glPopMatrix();
+}
