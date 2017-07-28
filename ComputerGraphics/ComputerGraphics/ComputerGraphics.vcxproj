@@ -140,15 +140,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="drawer.c" />
+    <ClCompile Include="animator.c" />
+    <ClCompile Include="back.c" />
+    <ClCompile Include="GLMetaseq.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="robot.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ground.ppm" />
     <None Include="packages.config" />
+    <None Include="ポリバケツ.mqo" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="drawer.h" />
-    <ClInclude Include="main.h" />
+    <ClInclude Include="animator.h" />
+    <ClInclude Include="back.h" />
+    <ClInclude Include="GLMetaseq.h" />
+    <ClInclude Include="robot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

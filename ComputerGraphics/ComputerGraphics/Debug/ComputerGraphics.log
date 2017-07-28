@@ -1,9 +1,20 @@
 ﻿  main.c
-c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(27): warning C4305: '関数': 'double' から 'GLclampf' へ切り詰めます。
-  drawer.c
-c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\drawer.c(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
-  コードを生成中...
-  LINK : 前回のインクリメンタル リンクで C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(21): warning C4244: '初期化中': 'double' から 'int' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(153): warning C4244: '関数': 'double' から 'GLint' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(79): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(92): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(93): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(94): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(95): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(103): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(104): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(105): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(106): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(108): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(109): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(110): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(168): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(171): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(174): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
   ComputerGraphics.vcxproj -> C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.exe
   ComputerGraphics.vcxproj -> C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.pdb (Partial PDB)
