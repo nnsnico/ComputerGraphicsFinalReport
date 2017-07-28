@@ -1,7 +1,8 @@
-﻿#ifndef _DRAWER_H_
+#ifndef _DRAWER_H_
 #define _DRAWER_H_
-
-//  関数avgのプロトタイプ宣言
-void drawGround();
-
+	void drawHead(int head);
+	void drawRightArm(int shoulder, int elbow);
+	void drawLeftArm(int shoulder, int elbow);
+	void drawRightLeg(int groin, int knee);
+	void drawLeftLeg(int groin, int knee);
 #endif // _DRAWER_H_

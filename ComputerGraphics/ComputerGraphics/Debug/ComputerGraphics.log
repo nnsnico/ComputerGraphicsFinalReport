@@ -1,3 +1,20 @@
 ﻿  main.c
-  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\Visual Studio 2017\Projects\ComputerGraphics\Debug\ComputerGraphicsFinal.exe
-  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\Visual Studio 2017\Projects\ComputerGraphics\Debug\ComputerGraphicsFinal.pdb (Partial PDB)
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(21): warning C4244: '初期化中': 'double' から 'int' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(153): warning C4244: '関数': 'double' から 'GLint' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(79): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(92): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(93): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(94): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(95): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(103): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(104): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(105): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(106): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(108): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(109): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(110): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(168): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(171): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+c:\users\nns\documents\myworkspace\computergraphics\computergraphicsfinalreport\computergraphics\computergraphics\main.c(174): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.exe
+  ComputerGraphics.vcxproj -> C:\Users\nns\Documents\MyWorkSpace\ComputerGraphics\ComputerGraphicsFinalReport\ComputerGraphics\Debug\ComputerGraphicsFinal.pdb (Partial PDB)
